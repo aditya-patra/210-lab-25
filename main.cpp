@@ -78,6 +78,16 @@ int main() {
     cout << sorting[1] << endl;
     cout << sorting[2] << endl;
 
+    // insertion
+    // set insert
+    start = high_resolution_clock::now();
+    set1.insert("TESTCODE");
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    inserting[0] = duration.count();
+
+    cout << inserting[0];
+
 
 
     return 0;
