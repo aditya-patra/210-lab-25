@@ -37,13 +37,14 @@ int main() {
     for(int i = 0; i < 20000; i++) {
         vec1.push_back(code_lst[i]);
     }
-    
+    /*
     for(auto i = 0; i < vec1.size(); i++) {
         cout << vec1[i] << endl;
-    }
+    }*/
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     reading[1] = duration.count();
+    cout << reading[1];
 
     return 0;
 }
