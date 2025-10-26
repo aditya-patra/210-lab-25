@@ -56,16 +56,23 @@ int main() {
     cout << reading[1] << endl;
     cout << reading[2] << endl;
 
-    //sorting test
-    //set sorting
+    // sorting test
+    // set sorting
     sorting[0] = -1;
 
-    //vector sorting
+    // vector sorting
     start = high_resolution_clock::now();
     sort(vec1.begin(), vec1.end());
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     sorting[1] = duration.count();
+
+    // list sorting
+    start = high_resolution_clock::now();
+    lst1.sort()
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    sorting[2] = duration.count();
 
 
 
