@@ -25,6 +25,7 @@ int main() {
     }
 
     // reading test
+    // set reading
     auto start = high_resolution_clock::now();
     for(int i = 0; i < 20000; i++) {
         set1.insert(code_lst[i]);
@@ -33,18 +34,28 @@ int main() {
     auto duration = duration_cast<milliseconds>(end - start);
     reading[0] = duration.count();
 
+    // vector reading
     start = high_resolution_clock::now();
     for(int i = 0; i < 20000; i++) {
         vec1.push_back(code_lst[i]);
     }
-    /*
-    for(auto i = 0; i < vec1.size(); i++) {
-        cout << vec1[i] << endl;
-    }*/
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     reading[1] = duration.count();
-    cout << reading[1];
+
+    // list reading
+    start = high_resolution_clock::now();
+    for(int i = 0; i < 20000; i++) {
+        vec1.push_back(code_lst[i]);
+    }
+    
+    for(auto i = 0; i < vec1.size(); i++) {
+        cout << vec1[i] << endl;
+    }
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    reading[2] = duration.count();
+    cout << reading[2];
 
     return 0;
 }
