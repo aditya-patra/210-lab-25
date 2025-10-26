@@ -29,10 +29,14 @@ int main() {
     for(int i = 0; i < 20000; i++) {
         set1.insert(code_lst[i]);
     }
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(end - start);
+    reading[0] = duration.count();
+    cout << reading[0];
+    /*
     for(auto i = set1.begin(); i != set1.end(); i++) {
         cout << *i << endl;
-    }
-    auto end = high_resolution_clock::now();
+    }*/
 
     return 0;
 }
