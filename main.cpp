@@ -52,9 +52,6 @@ int main() {
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     reading[2] = duration.count();
-    cout << reading[0] << endl;
-    cout << reading[1] << endl;
-    cout << reading[2] << endl;
 
     // sorting test
     // set sorting
@@ -106,7 +103,7 @@ int main() {
     // delete race
     // set delete
     start = high_resolution_clock::now();
-    int cnt = 1;
+    cnt = 1;
     for(auto i = set1.begin(); i != set1.end(); i++) {
         if (cnt == 10001) {
             set1.erase(i);
@@ -117,7 +114,16 @@ int main() {
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     deleting[0] = duration.count();
-    
+    cout << deleting[0];
+
+    // vector delete
+    start = high_resolution_clock::now();
+    cnt = 1;
+    vec1.erase(vec1.begin()+10001)
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    deleting[0] = duration.count();
+    cout << deleting[0];
 
 
     return 0;
