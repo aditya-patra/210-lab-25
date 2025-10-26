@@ -118,12 +118,26 @@ int main() {
 
     // vector delete
     start = high_resolution_clock::now();
-    cnt = 1;
-    vec1.erase(vec1.begin()+10001)
+    vec1.erase(vec1.begin()+10001);
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
-    deleting[0] = duration.count();
-    cout << deleting[0];
+    deleting[1] = duration.count();
+    cout << deleting[1];
+
+    // list delete
+    start = high_resolution_clock::now();
+    cnt = 1;
+    for(auto i = lst1.begin(); i != lst1.end(); i++) {
+        if (cnt == 10001) {
+            lst1.erase(i);
+            break;
+        }
+        cnt += 1;
+    }
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    deleting[2] = duration.count();
+    cout << deleting[2];
 
 
     return 0;
