@@ -46,7 +46,7 @@ int main() {
     // list reading
     start = high_resolution_clock::now();
     for(int i = 0; i < 20000; i++) {
-        vec1.push_back(code_lst[i]);
+        lst1.push_back(code_lst[i]);
     }
     
     for(auto i = lst1.begin(); i != lst1.end(); i++) {
