@@ -49,8 +49,8 @@ int main() {
         vec1.push_back(code_lst[i]);
     }
     
-    for(auto i = 0; i < lst1.size(); i++) {
-        cout << lst1[i] << endl;
+    for(auto i = lst1.begin(); i != lst1.end(); i++) {
+        cout << *i << endl;
     }
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
