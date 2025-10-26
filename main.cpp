@@ -5,6 +5,7 @@
 #include <list>
 #include <set>
 using namespace std;
+using namespace std::chrono;
 
 int main() {
     string code_lst[20000];
@@ -21,16 +22,17 @@ int main() {
 
     for(int i = 0; getline(file, curr_code); i++) {
         code_lst[i] = curr_code;
-        cout << code_lst[i] << endl;
     }
 
     // reading test
-    auto start = high_resolution_clock::now()
+    auto start = high_resolution_clock::now();
     for(int i = 0; i < 20000; i++) {
         set1.insert(code_lst[i]);
-        cout << set1.find(code_lst[i]);
     }
-    auto end = high_resolution_clock::now()
+    for(auto i = set1.begin(); i != set1.end(); i++) {
+        cout << *i << endl;
+    }
+    auto end = high_resolution_clock::now();
 
     return 0;
 }
