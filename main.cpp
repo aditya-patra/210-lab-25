@@ -32,7 +32,7 @@ int main() {
         set1.insert(code_lst[i]);
     }
     auto end = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(end - start);
+    auto duration = duration_cast<microseconds>(end - start);
     reading[0] = duration.count();
 
     // vector reading
@@ -41,7 +41,7 @@ int main() {
         vec1.push_back(code_lst[i]);
     }
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     reading[1] = duration.count();
 
     // list reading
@@ -50,7 +50,7 @@ int main() {
         lst1.push_back(code_lst[i]);
     }
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     reading[2] = duration.count();
 
     // sorting test
@@ -61,14 +61,14 @@ int main() {
     start = high_resolution_clock::now();
     sort(vec1.begin(), vec1.end());
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     sorting[1] = duration.count();
 
     // list sorting
     start = high_resolution_clock::now();
     lst1.sort();
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     sorting[2] = duration.count();
 
     // insertion
@@ -76,14 +76,14 @@ int main() {
     start = high_resolution_clock::now();
     set1.insert("TESTCODE");
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     inserting[0] = duration.count();
 
     // vector insert
     start = high_resolution_clock::now();
     vec1.insert(vec1.begin()+10000, "TESTCODE");
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     inserting[1] = duration.count();
 
     // list insert
@@ -97,7 +97,7 @@ int main() {
         cnt += 1;
     }
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     inserting[2] = duration.count();
     
     // delete race
@@ -112,14 +112,14 @@ int main() {
         cnt += 1;
     }
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     deleting[0] = duration.count();
 
     // vector delete
     start = high_resolution_clock::now();
     vec1.erase(vec1.begin()+10001);
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     deleting[1] = duration.count();
 
     // list delete
@@ -133,7 +133,7 @@ int main() {
         cnt += 1;
     }
     end = high_resolution_clock::now();
-    duration = duration_cast<milliseconds>(end - start);
+    duration = duration_cast<microseconds>(end - start);
     deleting[2] = duration.count();
 
     //output
