@@ -96,16 +96,24 @@ int main() {
     inserting[1] = duration.count();
 
     cout << inserting[1];
+
+    // list insert
+    start = high_resolution_clock::now();
+    int cnt = 1;
+    for(auto i = lst1.begin(); i != lst1.end(); i++) {
+        if (cnt == 10000) {
+            lst1.insert(i, "TESTCODE");
+        }
+        cnt += 1;
+    }
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    inserting[2] = duration.count();
+
+    cout << inserting[2];
     
 
 
 
     return 0;
 }
-
-/* syntax examples:
-auto start = high_resolution_clock::now()
-auto end = high_resolution_clock::now()
-auto duration = duration_cast<milliseconds>(end - start)
-duration.count() references elapsed milliseconds
-*/
