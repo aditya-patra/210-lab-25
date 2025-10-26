@@ -48,16 +48,25 @@ int main() {
     for(int i = 0; i < 20000; i++) {
         lst1.push_back(code_lst[i]);
     }
-    /*
-    for(auto i = lst1.begin(); i != lst1.end(); i++) {
-        cout << *i << endl;
-    }*/
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     reading[2] = duration.count();
     cout << reading[0] << endl;
     cout << reading[1] << endl;
     cout << reading[2] << endl;
+
+    //sorting test
+    //set sorting
+    sorting[0] = -1;
+
+    //vector sorting
+    start = high_resolution_clock::now();
+    vec1.sort()
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    sorting[1] = duration.count();
+
+
 
     return 0;
 }
