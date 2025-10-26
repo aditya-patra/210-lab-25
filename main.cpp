@@ -4,6 +4,7 @@
 #include <vector>
 #include <list>
 #include <set>
+#include <algorithm>
 using namespace std;
 using namespace std::chrono;
 
@@ -61,7 +62,7 @@ int main() {
 
     //vector sorting
     start = high_resolution_clock::now();
-    vec1.sort()
+    sort(vec1.begin(), vec1.end());
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     sorting[1] = duration.count();
