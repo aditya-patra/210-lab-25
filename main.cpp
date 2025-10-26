@@ -1,10 +1,16 @@
 #include <iostream>
 #include <chrono>
+#include <fstream>
 using namespace std;
 
 int main() {
-    
-
+    string code_lst[20000];
+    string curr_code;
+    ifstream file("codes.txt");
+    for(int i = 0; getline(file, curr_code); i++) {
+        code_lst[i] = curr_code;
+        cout << code_lst[i];
+    }
     return 0;
 }
 
