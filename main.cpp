@@ -90,7 +90,7 @@ int main() {
 
     // vector insert
     start = high_resolution_clock::now();
-    vec1.insert(10000, "TESTCODE");
+    vec1.insert(vec1.begin()+10000, "TESTCODE");
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     inserting[1] = duration.count();
