@@ -88,6 +88,16 @@ int main() {
 
     cout << inserting[0];
 
+    // vector insert
+    start = high_resolution_clock::now();
+    vec1.insert(10000, "TESTCODE");
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    inserting[1] = duration.count();
+
+    cout << inserting[1];
+    
+
 
 
     return 0;
