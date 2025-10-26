@@ -32,11 +32,18 @@ int main() {
     auto end = high_resolution_clock::now();
     auto duration = duration_cast<milliseconds>(end - start);
     reading[0] = duration.count();
-    cout << reading[0];
-    /*
-    for(auto i = set1.begin(); i != set1.end(); i++) {
-        cout << *i << endl;
-    }*/
+
+    start = high_resolution_clock::now();
+    for(int i = 0; i < 20000; i++) {
+        vec1.push_back(code_lst[i]);
+    }
+    
+    for(auto i = 0; i < vec1.size(); i++) {
+        cout << vec1.get(i) << endl;
+    }
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    reading[1] = duration.count();
 
     return 0;
 }
