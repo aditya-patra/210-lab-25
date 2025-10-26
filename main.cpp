@@ -74,10 +74,6 @@ int main() {
     duration = duration_cast<milliseconds>(end - start);
     sorting[2] = duration.count();
 
-    cout << sorting[0] << endl;
-    cout << sorting[1] << endl;
-    cout << sorting[2] << endl;
-
     // insertion
     // set insert
     start = high_resolution_clock::now();
@@ -86,8 +82,6 @@ int main() {
     duration = duration_cast<milliseconds>(end - start);
     inserting[0] = duration.count();
 
-    cout << inserting[0];
-
     // vector insert
     start = high_resolution_clock::now();
     vec1.insert(vec1.begin()+10000, "TESTCODE");
@@ -95,24 +89,35 @@ int main() {
     duration = duration_cast<milliseconds>(end - start);
     inserting[1] = duration.count();
 
-    cout << inserting[1];
-
     // list insert
     start = high_resolution_clock::now();
     int cnt = 1;
     for(auto i = lst1.begin(); i != lst1.end(); i++) {
         if (cnt == 10000) {
             lst1.insert(i, "TESTCODE");
+            break;
         }
         cnt += 1;
     }
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     inserting[2] = duration.count();
-
-    cout << inserting[2];
     
-
+    // delete race
+    // set delete
+    start = high_resolution_clock::now();
+    int cnt = 1;
+    for(auto i = set1.begin(); i != set1.end(); i++) {
+        if (cnt == 10001) {
+            set1.erase(i);
+            break;
+        }
+        cnt += 1;
+    }
+    end = high_resolution_clock::now();
+    duration = duration_cast<milliseconds>(end - start);
+    deleting[0] = duration.count();
+    
 
 
     return 0;
