@@ -1,7 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <fstream>
-#include <vectror>
+#include <vector>
 #include <list>
 #include <set>
 using namespace std;
@@ -25,9 +25,12 @@ int main() {
     }
 
     // reading test
+    auto start = high_resolution_clock::now()
     for(int i = 0; i < 20000; i++) {
         set1.insert(code_lst[i]);
+        cout << set1.find(code_lst[i]);
     }
+    auto end = high_resolution_clock::now()
 
     return 0;
 }
