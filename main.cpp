@@ -137,10 +137,10 @@ int main() {
     deleting[2] = duration.count();
 
     //output
-    cout << "Operation  Vector  List  Set" << endl;
-    cout << "Read       " << reading[1] << "       " << reading[2] << "     " << reading[0] << endl;
-    cout << "Sort       " << sorting[1] << "       " << sorting[2] << "     " << sorting[0] << endl;
-    cout << "Insert     " << inserting[1] << "       " << inserting[2] << "     " << inserting[0] << endl;
-    cout << "Delete     " << deleting[1] << "       " << deleting[2] << "     " << deleting[0] << endl;
+    cout << "Operation    Vector    List    Set" << endl;
+    cout << "Read         " << reading[1] << "      " << reading[2] << "    " << reading[0] << endl;
+    cout << "Sort         " << sorting[1] << "      " << sorting[2] << "    " << sorting[0] << endl;
+    cout << "Insert       " << inserting[1] << "        " << inserting[2] << "     " << inserting[0] << endl;
+    cout << "Delete       " << deleting[1] << "        " << deleting[2] << "     " << deleting[0] << endl;
     return 0;
 }
