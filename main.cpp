@@ -114,7 +114,6 @@ int main() {
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     deleting[0] = duration.count();
-    cout << deleting[0];
 
     // vector delete
     start = high_resolution_clock::now();
@@ -122,7 +121,6 @@ int main() {
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     deleting[1] = duration.count();
-    cout << deleting[1];
 
     // list delete
     start = high_resolution_clock::now();
@@ -137,8 +135,12 @@ int main() {
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     deleting[2] = duration.count();
-    cout << deleting[2];
 
-
+    //output
+    cout << "Operation  Vector  List  Set" << endl;
+    cout << "Read       " << reading[1] << "       " << reading[2] << "     " << reading[0] << endl;
+    cout << "Sort       " << sorting[1] << "       " << sorting[2] << "     " << sorting[0] << endl;
+    cout << "Insert     " << inserting[1] << "       " << inserting[2] << "     " << inserting[0] << endl;
+    cout << "Delete     " << deleting[1] << "       " << deleting[2] << "     " << deleting[0] << endl;
     return 0;
 }
