@@ -69,10 +69,14 @@ int main() {
 
     // list sorting
     start = high_resolution_clock::now();
-    lst1.sort()
+    lst1.sort();
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
     sorting[2] = duration.count();
+
+    cout << sorting[0] << endl;
+    cout << sorting[1] << endl;
+    cout << sorting[2] << endl;
 
 
 
