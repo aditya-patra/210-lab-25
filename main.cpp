@@ -39,7 +39,7 @@ int main() {
     }
     
     for(auto i = 0; i < vec1.size(); i++) {
-        cout << vec1.get(i) << endl;
+        cout << vec1[i] << endl;
     }
     end = high_resolution_clock::now();
     duration = duration_cast<milliseconds>(end - start);
